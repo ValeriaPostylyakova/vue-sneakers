@@ -1,24 +1,19 @@
 <script setup>
 import CardMain from './CardMain.vue';
 
-const onClickAdd = () => {
-    
-};
+defineProps({
+    items: Array
+});
 </script>
 
 <template>
     <div class="grid grid-cols-4 gap-5">
         <CardMain
-         img-url="./sneakers/sneakers-1.jpg"
-          :price="12999"
-           title="Мужские Кроссовки Nike Blazer Mid Suede"
-           :is-added="false"
-           :isLike="true"
-           :onClickAdd="onClickAdd"
-           />
-        <CardMain/>
-        <CardMain/>
-        <CardMain/>
-        <CardMain/>
+        v-for="item in items"
+          :key="item.id"
+          :image-url="item.imageUrl"
+          :title="item.title"
+          :price="item.price"
+          :onClickAdd="onClickAdd"/>
     </div>
 </template>

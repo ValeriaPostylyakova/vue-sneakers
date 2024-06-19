@@ -1,6 +1,6 @@
 <script setup>
   defineProps({
-    imgUrl: String,
+    imageUrl: String,
     title: String,
     price: Number,
     isLike: Boolean,
@@ -13,7 +13,7 @@
 <template>
   <div class="relative bg-white border border-slate-100 transition rounded-3xl p-8 cursor-pointer hover:-translate-y-2 hover:shadow-xl">
     <img @click="onClickLike" :src="!isLike ? '/like-1.svg' :  '/like-2.svg'" alt="like" class="absolute top-8 left-8">
-    <img :src="imgUrl" alt="sneaker">
+    <img :src="imageUrl" alt="sneaker">
     <p class="mt-2">{{ title }}</p>
 
     <div class="flex justify-between mt-5">
