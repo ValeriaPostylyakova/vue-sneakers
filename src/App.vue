@@ -1,11 +1,19 @@
 <script setup>
-
+import Header from './components/Header.vue';
+import List from './components/List.vue';
+import Drawer from './components/Drawer.vue';
 </script>
 
 <template>
-  <div class="mb-5">
-    <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem odit sed totam voluptate iusto. Ab odio explicabo tempora recusandae temporibus mollitia sunt, quo facere quasi rem, impedit, blanditiis distinctio quaerat.</p>
+  <Drawer/>
+  <div class="bg-white w-4/5 m-auto rounded-xl shadow-xl mt-14">
+    <Header/>
+    <div class="p-10">
+      <h2 class="text-3xl font-bold mb-8">Все кроссовки</h2>
+
+      <List/>
   </div>
+</div>
 </template>
 
 <style scoped>
